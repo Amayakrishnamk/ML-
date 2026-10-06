@@ -17,7 +17,7 @@ print("b2 =", b2)
 print("\nMultiple Linear Regression Equation:")
 print(f"Y = {b0:.4f} + ({b1:.4f})X1 + ({b2:.4f})X2")
 X_new = np.array([1, 5, 88])
-predicted_marks = X_new @ bet
+predicted_marks = X_new @ beta
 print("\nPrediction:")
 print("Hours Studied =", X_new[1])
 print("Attendance =", X_new[2], "%")

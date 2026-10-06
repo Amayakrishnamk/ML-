@@ -1,37 +1,25 @@
 import numpy as np
 from matplotlib import pyplot as plt
-
 X = np.array([10, 15, 20, 25, 30], dtype=float)
-
 Y = np.array([50, 65, 78, 90, 105], dtype=float)
 n = len(X)
-
 b0 = 0.0
 b1 = 0.0
-
 alpha = 0.001
-
 iterations = 10000
-
 m = len(X)
-
 for i in range(iterations):
-
     Y_pred = b0 + b1 * X
-
     db0 = (-2 / m) * np.sum(Y - Y_pred)
     db1 = (-2 / m) * np.sum(X * (Y - Y_pred))
-
     b0 = b0 - alpha * db0
     b1 = b1 - alpha * db1
 
 print("Intercept (b0) =", b0)
 print("Slope (b1) =", b1)
-
 X_new = 22
 
 predicted_sales = b0 + b1 * X_new
-
 print("Regression Equation:")
 print("Sales =", b0, "+", b1, "* Advertising")
 
